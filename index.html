@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Open Free Demat Account</title>
+<title>Start Your Trading Journey</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -20,7 +20,6 @@ font-family:Poppins;
 body{
 background:#f6f8ff;
 color:#111;
-padding-bottom:90px;
 }
 
 .container{
@@ -29,124 +28,75 @@ margin:auto;
 padding:20px;
 }
 
-/* HERO */
+/* CARD */
 
-.hero{
-background:linear-gradient(135deg,#2b5cff,#0d2c8b);
-border-radius:22px;
-padding:30px 20px;
-color:white;
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,0.08);
 text-align:center;
-box-shadow:0 20px 50px rgba(0,0,0,0.2);
 }
 
-.hero h1{
-font-size:28px;
-font-weight:700;
+h2{
+font-size:22px;
+margin-bottom:15px;
 }
 
-.hero p{
-margin-top:10px;
-font-size:14px;
-opacity:.9;
+.option{
+background:#f1f4ff;
+padding:14px;
+border-radius:12px;
+margin:10px 0;
+cursor:pointer;
+font-weight:500;
+transition:.3s;
 }
 
-/* BONUS CARD */
+.option:hover{
+background:#2b5cff;
+color:white;
+}
+
+/* FINAL SCREEN */
+
+.final{
+display:none;
+text-align:center;
+}
 
 .bonus{
-background:white;
-margin-top:20px;
-padding:20px;
-border-radius:18px;
-box-shadow:0 10px 35px rgba(0,0,0,0.08);
+background:#fff;
+padding:18px;
+border-radius:16px;
+margin-top:15px;
+box-shadow:0 8px 30px rgba(0,0,0,0.07);
 }
-
-.bonus h2{
-font-size:20px;
-color:#2b5cff;
-margin-bottom:8px;
-}
-
-.bonus p{
-font-size:14px;
-color:#555;
-}
-
-/* FEATURES */
-
-.features{
-margin-top:20px;
-}
-
-.feature{
-background:white;
-padding:16px;
-border-radius:14px;
-margin-bottom:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.06);
-display:flex;
-gap:10px;
-align-items:center;
-}
-
-.icon{
-font-size:20px;
-}
-
-.text{
-font-size:14px;
-}
-
-/* REVIEWS */
-
-.review{
-background:white;
-padding:15px;
-border-radius:14px;
-margin-top:12px;
-box-shadow:0 6px 20px rgba(0,0,0,0.06);
-font-size:14px;
-}
-
-/* TRUST */
-
-.trust{
-margin-top:18px;
-text-align:center;
-font-size:13px;
-color:#666;
-}
-
-/* STICKY BUTTON */
 
 .sticky-btn{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
+display:block;
+margin-top:20px;
 background:linear-gradient(135deg,#ff7b00,#ff5200);
 color:white;
-text-align:center;
-padding:18px;
+padding:16px;
+border-radius:12px;
+text-decoration:none;
 font-size:18px;
 font-weight:600;
-text-decoration:none;
-box-shadow:0 -5px 20px rgba(0,0,0,0.2);
-z-index:999;
 }
 
-/* FOOTER */
+/* PROGRESS */
 
-.footer{
-margin-top:25px;
+.progress{
 text-align:center;
-font-size:12px;
-color:#888;
+font-size:13px;
+margin-bottom:10px;
+color:#666;
 }
 
 </style>
 
-  <!-- Meta Pixel Code -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -156,90 +106,93 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1982488422624043');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1982488422624043&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
 
-  
 </head>
 
 <body>
 
 <div class="container">
 
-<div class="hero">
+<div class="progress" id="progress">Step 1 of 3</div>
 
-<h1>Open FREE Demat Account</h1>
+<!-- QUIZ -->
+<div class="card" id="quiz">
 
-<p>Start trading Stocks, F&O, IPO & Mutual Funds easily</p>
+<h2 id="question">Do you want to start earning from Stock Market?</h2>
+
+<div class="option" onclick="nextQ()">Yes, I want to earn</div>
+<div class="option" onclick="nextQ()">Just exploring</div>
 
 </div>
 
+<!-- FINAL -->
+<div class="card final" id="final">
+
+<h2>🎉 You're Eligible!</h2>
+
+<p>You can start trading today & get exclusive benefits</p>
 
 <div class="bonus">
-
-<h2>🎁 ₹50,000 Trading Masterclass FREE</h2>
-
-<p>Open your account today and get premium trading education including strategies, risk management and live market analysis.</p>
-
+🎁 <b>₹50,000 Trading Masterclass FREE</b><br><br>
+Learn strategies, risk management & live trading
 </div>
 
-
-<div class="features">
-
-<div class="feature">
-<div class="icon">⚡</div>
-<div class="text">Fast Online Account Opening</div>
-</div>
-
-<div class="feature">
-<div class="icon">📊</div>
-<div class="text">Trade Stocks, IPO, F&O & Mutual Funds</div>
-</div>
-
-<div class="feature">
-<div class="icon">🔐</div>
-<div class="text">Secure & Trusted Trading Platform</div>
-</div>
-
-<div class="feature">
-<div class="icon">💰</div>
-<div class="text">Zero Account Opening Charges</div>
-</div>
-
-</div>
-
-
-<div class="review">
-⭐ “Account opening process was super fast and easy.”  
-— Rahul Sharma
-</div>
-
-<div class="review">
-⭐ “Masterclass helped me understand trading clearly.”  
-— Aman Verma
-</div>
-
-
-<p class="trust">
-Trusted by Millions of Traders
-</p>
-
-<div class="footer">
-Powered by Angel One
-</div>
-
-</div>
-
-
-<a class="sticky-btn" href="https://a.aonelink.in/ANGOne/4LKY6fC">
-Open Free Demat Account
+<a class="sticky-btn" href="#" onclick="trackLead()">
+Start My Trading Journey 🚀
 </a>
 
+</div>
+
+</div>
+
+<script>
+
+let step = 1;
+
+function nextQ(){
+
+step++;
+
+if(step == 2){
+document.getElementById("question").innerText = "Are you a beginner in trading?";
+document.getElementById("progress").innerText = "Step 2 of 3";
+}
+
+else if(step == 3){
+document.getElementById("question").innerText = "Do you want FREE trading training worth ₹50,000?";
+document.getElementById("progress").innerText = "Step 3 of 3";
+}
+
+else{
+document.getElementById("quiz").style.display = "none";
+document.getElementById("progress").style.display = "none";
+document.getElementById("final").style.display = "block";
+}
+
+}
+
+// 🔥 LEAD TRACKING FUNCTION
+function trackLead(){
+
+// FIRE LEAD EVENT WITH DATA
+fbq('track', 'Lead', {
+content_name: 'Demat Account Opening',
+value: 1,
+currency: 'INR'
+});
+
+// DELAY FOR PROPER TRACKING
+setTimeout(function(){
+window.location.href = "https://a.aonelink.in/ANGOne/4LKY6fC";
+}, 500);
+
+}
+
+</script>
 
 </body>
 </html>
